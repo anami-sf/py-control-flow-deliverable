@@ -12,3 +12,14 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+fib_sequence = [0, 1]
+
+print('term: 0 / number: 0\nterm: 1 / number: 1')
+idx = 2
+while idx < 51:
+    prev = idx-2
+    current = idx-1
+    next_fib = fib_sequence[prev] + fib_sequence[current]
+    fib_sequence.append(next_fib)
+    print(f'term: {idx} / number: {next_fib}')
+    idx += 1
